@@ -47,11 +47,11 @@ header{display:flex;align-items:center;justify-content:space-between;padding:16p
 .main-nav-btn.ai-btn.active{color:var(--ai);border-bottom-color:var(--ai);opacity:1;}
 .main-nav-btn:hover:not(.active){color:var(--muted2);}
 
-/* SECTION PAGES */
+/* PAGES */
 .page{display:none;}
 .page.active{display:block;}
 
-/* WORKOUT PAGE */
+/* WORKOUT TAB ROW */
 .tab-row{display:flex;align-items:stretch;border-bottom:1px solid var(--border);background:var(--surface);}
 .tab-nav{display:flex;flex:1;overflow-x:auto;scrollbar-width:none;}
 .tab-nav::-webkit-scrollbar{display:none;}
@@ -64,12 +64,12 @@ header{display:flex;align-items:center;justify-content:space-between;padding:16p
 .add-prog-btn{flex-shrink:0;background:none;border:none;border-left:1px solid var(--border);color:var(--muted);cursor:pointer;padding:10px 14px 8px;font-size:17px;transition:color .2s;}
 .add-prog-btn:hover{color:var(--accent);}
 
-/* MAIN CONTENT */
+/* MAIN */
 main{padding:0 20px 140px;}
 .wview{display:none;}
 .wview.active{display:block;}
 
-/* SECTION HEADER */
+/* SECTION HDR */
 .sec-hdr{display:flex;align-items:center;gap:10px;padding:16px 0 10px;}
 .sec-lbl{font-family:'Bebas Neue',sans-serif;font-size:11px;letter-spacing:3px;color:var(--muted);}
 .sec-line{flex:1;height:1px;background:var(--border);}
@@ -107,8 +107,7 @@ main{padding:0 20px 140px;}
 .sinput:focus{border-color:var(--accent);box-shadow:0 0 0 2px rgba(232,255,71,.1);}
 .sinput::placeholder{color:var(--muted);font-size:10px;}
 .sinput.locked{opacity:.4;pointer-events:none;}
-input[type=number]::-webkit-outer-spin-button,
-input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
+input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
 .cbtn{width:28px;height:28px;border-radius:50%;border:2px solid var(--border2);background:none;color:var(--muted);cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:12px;transition:all .2s;margin:auto;}
 .cbtn.done{background:var(--success);border-color:var(--success);color:#000;}
 .cbtn:hover:not(.done){border-color:var(--success);color:var(--success);}
@@ -132,14 +131,11 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
 .empty-state{text-align:center;padding:44px 24px;color:var(--muted);font-size:14px;line-height:1.8;}
 .empty-ico{font-size:34px;margin-bottom:10px;}
 
-/* ══ AI COACH PAGE ══ */
+/* AI COACH PAGE */
 .ai-page{padding:20px 20px 140px;}
-
 .ai-banner{background:var(--ai-bg);border:1px solid var(--ai-border);border-radius:16px;padding:18px;margin-bottom:20px;}
 .ai-banner-title{font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:2px;color:var(--ai);margin-bottom:4px;}
 .ai-banner-sub{font-size:13px;color:var(--muted2);line-height:1.5;}
-
-/* GOALS SAVED */
 .goals-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;margin-bottom:16px;}
 .goals-card-hdr{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;}
 .goals-card-lbl{font-family:'Bebas Neue',sans-serif;font-size:12px;letter-spacing:3px;color:var(--muted);}
@@ -162,15 +158,13 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
 .chat-bubble strong{color:var(--accent);font-weight:600;}
 .chat-bubble ul{padding-left:16px;margin:4px 0;}
 .chat-bubble li{margin-bottom:3px;}
-
-/* TYPING INDICATOR */
 .typing-indicator{display:flex;gap:4px;align-items:center;padding:4px 0;}
 .typing-dot{width:6px;height:6px;border-radius:50%;background:var(--ai);animation:tdot 1.2s ease-in-out infinite;}
 .typing-dot:nth-child(2){animation-delay:.2s;}
 .typing-dot:nth-child(3){animation-delay:.4s;}
 @keyframes tdot{0%,80%,100%{opacity:.2;transform:scale(.8)}40%{opacity:1;transform:scale(1)}}
 
-/* PROGRAM PREVIEW CARDS */
+/* PROGRAM PREVIEWS */
 .prog-previews{display:flex;flex-direction:column;gap:10px;margin:12px 0;}
 .prog-preview{background:var(--surface2);border:1px solid var(--border);border-radius:12px;overflow:hidden;}
 .prog-preview-hdr{display:flex;align-items:center;justify-content:space-between;padding:12px 14px;cursor:pointer;}
@@ -185,10 +179,8 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
 .prev-ex-name{flex:1;font-weight:500;}
 .prev-ex-detail{font-family:'DM Mono',monospace;font-size:10px;color:var(--muted);}
 .prev-rest{font-family:'DM Mono',monospace;font-size:10px;color:var(--accent2);}
-
 .add-all-btn{width:100%;margin-top:14px;background:var(--ai);color:#000;border:none;font-family:'Bebas Neue',sans-serif;font-size:17px;letter-spacing:3px;padding:13px;border-radius:12px;cursor:pointer;transition:opacity .2s;}
 .add-all-btn:hover{opacity:.88;}
-.add-all-btn:disabled{opacity:.4;cursor:not-allowed;}
 
 /* CHAT INPUT */
 .chat-input-row{display:flex;gap:8px;align-items:flex-end;position:sticky;bottom:80px;background:var(--bg);padding:10px 0 4px;}
@@ -198,12 +190,10 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
 .chat-send-btn{width:40px;height:40px;border-radius:50%;background:var(--ai);border:none;color:#000;font-size:16px;cursor:pointer;flex-shrink:0;display:flex;align-items:center;justify-content:center;transition:opacity .2s;}
 .chat-send-btn:hover{opacity:.85;}
 .chat-send-btn:disabled{opacity:.35;cursor:not-allowed;}
-
-/* NEW CHAT BTN */
 .new-chat-btn{width:100%;background:none;border:1px solid var(--border);color:var(--muted);font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;padding:10px;border-radius:10px;cursor:pointer;transition:all .2s;margin-bottom:14px;}
 .new-chat-btn:hover{border-color:var(--ai);color:var(--ai);}
 
-/* SHEETS & DIALOGS */
+/* SHEETS */
 .overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:500;align-items:flex-end;backdrop-filter:blur(5px);}
 .overlay.open{display:flex;}
 .sheet{background:var(--surface);width:100%;max-height:92vh;border-radius:20px 20px 0 0;border-top:1px solid var(--border2);display:flex;flex-direction:column;animation:sup .3s cubic-bezier(.16,1,.3,1);}
@@ -242,6 +232,8 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
 .custom-input::placeholder{color:var(--muted);}
 .custom-cat-sel{background:var(--surface2);border:1px solid var(--border);color:var(--muted2);font-family:'DM Sans',sans-serif;font-size:12px;padding:8px;border-radius:8px;outline:none;cursor:pointer;}
 .custom-add{background:var(--accent);color:#000;border:none;border-radius:8px;font-family:'Bebas Neue',sans-serif;font-size:14px;letter-spacing:2px;padding:8px 14px;cursor:pointer;white-space:nowrap;}
+
+/* DIALOGS */
 .dialog-overlay{display:none;position:fixed;inset:0;background:rgba(0,0,0,.82);z-index:600;align-items:center;justify-content:center;padding:24px;backdrop-filter:blur(5px);}
 .dialog-overlay.open{display:flex;}
 .dialog{background:var(--surface);border:1px solid var(--border2);border-radius:16px;padding:22px;width:100%;max-width:340px;}
@@ -294,14 +286,12 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
 /* TOAST */
 .toast{position:fixed;top:16px;left:50%;transform:translateX(-50%) translateY(-65px);background:var(--surface2);border:1px solid var(--border2);color:var(--text);font-family:'DM Mono',monospace;font-size:12px;padding:9px 16px;border-radius:9px;z-index:999;transition:transform .3s cubic-bezier(.16,1,.3,1);white-space:nowrap;pointer-events:none;}
 .toast.show{transform:translateX(-50%) translateY(0);}
-
 ::-webkit-scrollbar{width:3px;}
 ::-webkit-scrollbar-track{background:transparent;}
 ::-webkit-scrollbar-thumb{background:var(--border);border-radius:3px;}
 </style>
 </head>
 <body>
-
 <div class="toast" id="toast"></div>
 
 <!-- BUILDER SHEET -->
@@ -359,7 +349,6 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
   </div>
 </div>
 
-<!-- HEADER -->
 <header>
   <div class="logo">LIFT</div>
   <div class="hdr-right">
@@ -367,36 +356,28 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
     <div class="date-chip" id="headerDate"></div>
   </div>
 </header>
-
 <div class="session-bar" id="sessionBar">
   <div class="sdot"></div>
   <span class="stext">SESSION ACTIVE</span>
   <span class="selapsed" id="selapsed">00:00</span>
 </div>
-
-<!-- MAIN NAV -->
 <div class="main-nav">
   <button class="main-nav-btn active" id="nav-workouts" onclick="switchPage('workouts')">WORKOUTS</button>
   <button class="main-nav-btn ai-btn" id="nav-coach" onclick="switchPage('coach')">✦ AI COACH</button>
 </div>
 
-<!-- WORKOUTS PAGE -->
 <div class="page active" id="page-workouts">
   <div class="tab-row">
     <div class="tab-nav" id="tabNav"></div>
-    <button class="add-prog-btn" onclick="addProgram()" title="New program">＋</button>
+    <button class="add-prog-btn" onclick="addProgram()">＋</button>
   </div>
   <main id="main"></main>
 </div>
 
-<!-- AI COACH PAGE -->
 <div class="page" id="page-coach">
-  <div class="ai-page" id="aiPage">
-    <!-- dynamically rendered -->
-  </div>
+  <div class="ai-page" id="aiPage"></div>
 </div>
 
-<!-- TIMER -->
 <div class="timer-bar" id="timerBar">
   <div class="timer-top">
     <div>
@@ -421,66 +402,61 @@ input[type=number]::-webkit-inner-spin-button{-webkit-appearance:none;}
 </div>
 
 <script>
-// ══════════════════════════════════════════════════════════
-// LIBRARY
-// ══════════════════════════════════════════════════════════
-const LIB = [
-  {id:'bp',    name:'Barbell Bench Press',      cat:'Push',        tag:'4×6–8'},
-  {id:'ohp',   name:'Overhead Press',            cat:'Push',        tag:'4×6–8'},
-  {id:'incdb', name:'Incline Dumbbell Press',    cat:'Push',        tag:'3×8–10'},
-  {id:'dips',  name:'Weighted Dips',             cat:'Push',        tag:'3×8–10'},
-  {id:'cfly',  name:'Cable Chest Fly',           cat:'Push',        tag:'3×12–15'},
-  {id:'pecdec',name:'Pec Deck',                  cat:'Push',        tag:'3×12–15'},
-  {id:'cgbp',  name:'Close-Grip Bench Press',    cat:'Push',        tag:'3×8–10'},
-  {id:'pullup',name:'Weighted Pull-Up',          cat:'Pull',        tag:'4×5–8'},
-  {id:'br',    name:'Barbell Row',               cat:'Pull',        tag:'4×6–8'},
-  {id:'csr',   name:'Cable Seated Row',          cat:'Pull',        tag:'3×10–12'},
-  {id:'lat',   name:'Lat Pulldown',              cat:'Pull',        tag:'3×10–12'},
-  {id:'dbrow', name:'Dumbbell Row',              cat:'Pull',        tag:'3×10–12'},
-  {id:'trow',  name:'T-Bar Row',                 cat:'Pull',        tag:'3×8–10'},
-  {id:'shrug', name:'Barbell Shrug',             cat:'Pull',        tag:'3×10–12'},
-  {id:'lrise', name:'Cable Lateral Raise',       cat:'Shoulders',   tag:'3×12–15'},
-  {id:'fraise',name:'Front Raise',               cat:'Shoulders',   tag:'3×12–15'},
-  {id:'facep', name:'Face Pull',                 cat:'Shoulders',   tag:'3×15–20'},
-  {id:'rrdelt',name:'Rear Delt Fly',             cat:'Shoulders',   tag:'3×12–15'},
-  {id:'arnprs',name:'Arnold Press',              cat:'Shoulders',   tag:'3×10–12'},
-  {id:'dbohp', name:'DB Shoulder Press',         cat:'Shoulders',   tag:'3×10–12'},
-  {id:'dbcurl',name:'Dumbbell Curl',             cat:'Arms',        tag:'3×10–12'},
-  {id:'hcurl', name:'Hammer Curl',               cat:'Arms',        tag:'3×10–12'},
-  {id:'prcurl',name:'Preacher Curl',             cat:'Arms',        tag:'3×10–12'},
-  {id:'cbcurl',name:'Cable Curl',                cat:'Arms',        tag:'3×12–15'},
-  {id:'incurl',name:'Incline DB Curl',           cat:'Arms',        tag:'3×10–12'},
-  {id:'tpd',   name:'Tricep Pushdown',           cat:'Arms',        tag:'3×10–12'},
-  {id:'ohtri', name:'Overhead Tricep Ext.',      cat:'Arms',        tag:'3×10–12'},
-  {id:'skulls',name:'Skull Crushers',            cat:'Arms',        tag:'3×10–12'},
-  {id:'plank', name:'Plank Hold',                cat:'Core',        tag:'3×60s'},
-  {id:'crnch', name:'Cable Crunch',              cat:'Core',        tag:'3×15–20'},
-  {id:'llift', name:'Leg Raise',                 cat:'Core',        tag:'3×15'},
-  {id:'abwhl', name:'Ab Wheel Rollout',          cat:'Core',        tag:'3×10–12'},
-  {id:'stwist',name:'Russian Twist',             cat:'Core',        tag:'3×20'},
-  {id:'squat', name:'Back Squat',                cat:'Legs',        tag:'4×5–6'},
-  {id:'ftsqt', name:'Front Squat',               cat:'Legs',        tag:'4×5–6'},
-  {id:'rdl',   name:'Romanian Deadlift',         cat:'Legs',        tag:'4×6–8'},
-  {id:'dl',    name:'Conventional Deadlift',     cat:'Legs',        tag:'4×4–6'},
-  {id:'legprs',name:'Leg Press',                 cat:'Legs',        tag:'3×8–12'},
-  {id:'legext',name:'Leg Extension',             cat:'Legs',        tag:'3×12–15'},
-  {id:'lgcurl',name:'Lying Leg Curl',            cat:'Legs',        tag:'3×10–12'},
-  {id:'hipthst',name:'Hip Thrust',               cat:'Legs',        tag:'3×10–12'},
-  {id:'stcalf',name:'Standing Calf Raise',       cat:'Legs',        tag:'4×12–15'},
-  {id:'wrlext',name:'Wrist Roller',              cat:'Accessories', tag:'3×sets'},
-  {id:'farmrs',name:"Farmer's Walk",             cat:'Accessories', tag:'3×40m'},
-  {id:'deadhn',name:'Dead Hang',                 cat:'Accessories', tag:'3×30–60s'},
-  {id:'wrcurl',name:'Wrist Curl',                cat:'Accessories', tag:'3×15–20'},
-  {id:'plank2',name:'Plank (Acc)',               cat:'Accessories', tag:'3×60s'},
+// ── LIBRARY ──────────────────────────────────────────────
+const LIB=[
+  {id:'bp',name:'Barbell Bench Press',cat:'Push',tag:'4×6–8'},
+  {id:'ohp',name:'Overhead Press',cat:'Push',tag:'4×6–8'},
+  {id:'incdb',name:'Incline Dumbbell Press',cat:'Push',tag:'3×8–10'},
+  {id:'dips',name:'Weighted Dips',cat:'Push',tag:'3×8–10'},
+  {id:'cfly',name:'Cable Chest Fly',cat:'Push',tag:'3×12–15'},
+  {id:'pecdec',name:'Pec Deck',cat:'Push',tag:'3×12–15'},
+  {id:'cgbp',name:'Close-Grip Bench Press',cat:'Push',tag:'3×8–10'},
+  {id:'pullup',name:'Weighted Pull-Up',cat:'Pull',tag:'4×5–8'},
+  {id:'br',name:'Barbell Row',cat:'Pull',tag:'4×6–8'},
+  {id:'csr',name:'Cable Seated Row',cat:'Pull',tag:'3×10–12'},
+  {id:'lat',name:'Lat Pulldown',cat:'Pull',tag:'3×10–12'},
+  {id:'dbrow',name:'Dumbbell Row',cat:'Pull',tag:'3×10–12'},
+  {id:'trow',name:'T-Bar Row',cat:'Pull',tag:'3×8–10'},
+  {id:'shrug',name:'Barbell Shrug',cat:'Pull',tag:'3×10–12'},
+  {id:'lrise',name:'Cable Lateral Raise',cat:'Shoulders',tag:'3×12–15'},
+  {id:'fraise',name:'Front Raise',cat:'Shoulders',tag:'3×12–15'},
+  {id:'facep',name:'Face Pull',cat:'Shoulders',tag:'3×15–20'},
+  {id:'rrdelt',name:'Rear Delt Fly',cat:'Shoulders',tag:'3×12–15'},
+  {id:'arnprs',name:'Arnold Press',cat:'Shoulders',tag:'3×10–12'},
+  {id:'dbohp',name:'DB Shoulder Press',cat:'Shoulders',tag:'3×10–12'},
+  {id:'dbcurl',name:'Dumbbell Curl',cat:'Arms',tag:'3×10–12'},
+  {id:'hcurl',name:'Hammer Curl',cat:'Arms',tag:'3×10–12'},
+  {id:'prcurl',name:'Preacher Curl',cat:'Arms',tag:'3×10–12'},
+  {id:'cbcurl',name:'Cable Curl',cat:'Arms',tag:'3×12–15'},
+  {id:'incurl',name:'Incline DB Curl',cat:'Arms',tag:'3×10–12'},
+  {id:'tpd',name:'Tricep Pushdown',cat:'Arms',tag:'3×10–12'},
+  {id:'ohtri',name:'Overhead Tricep Ext.',cat:'Arms',tag:'3×10–12'},
+  {id:'skulls',name:'Skull Crushers',cat:'Arms',tag:'3×10–12'},
+  {id:'plank',name:'Plank Hold',cat:'Core',tag:'3×60s'},
+  {id:'crnch',name:'Cable Crunch',cat:'Core',tag:'3×15–20'},
+  {id:'llift',name:'Leg Raise',cat:'Core',tag:'3×15'},
+  {id:'abwhl',name:'Ab Wheel Rollout',cat:'Core',tag:'3×10–12'},
+  {id:'stwist',name:'Russian Twist',cat:'Core',tag:'3×20'},
+  {id:'squat',name:'Back Squat',cat:'Legs',tag:'4×5–6'},
+  {id:'rdl',name:'Romanian Deadlift',cat:'Legs',tag:'4×6–8'},
+  {id:'dl',name:'Conventional Deadlift',cat:'Legs',tag:'4×4–6'},
+  {id:'legprs',name:'Leg Press',cat:'Legs',tag:'3×8–12'},
+  {id:'legext',name:'Leg Extension',cat:'Legs',tag:'3×12–15'},
+  {id:'lgcurl',name:'Lying Leg Curl',cat:'Legs',tag:'3×10–12'},
+  {id:'hipthst',name:'Hip Thrust',cat:'Legs',tag:'3×10–12'},
+  {id:'stcalf',name:'Standing Calf Raise',cat:'Legs',tag:'4×12–15'},
+  {id:'secalf',name:'Seated Calf Raise',cat:'Legs',tag:'3×15–20'},
+  {id:'wrlext',name:'Wrist Roller',cat:'Accessories',tag:'3×sets'},
+  {id:'farmrs',name:"Farmer's Walk",cat:'Accessories',tag:'3×40m'},
+  {id:'deadhn',name:'Dead Hang',cat:'Accessories',tag:'3×30–60s'},
+  {id:'wrcurl',name:'Wrist Curl',cat:'Accessories',tag:'3×15–20'},
 ];
 const CAT_ORDER=['Push','Pull','Shoulders','Arms','Core','Legs','Accessories'];
 const ACC_CATS=new Set(['Core','Legs','Accessories']);
 
-// ══════════════════════════════════════════════════════════
-// STATE
-// ══════════════════════════════════════════════════════════
-function load(){try{return JSON.parse(localStorage.getItem('lift6')||'{}')}catch{return{}}}
-function save(){localStorage.setItem('lift6',JSON.stringify(S))}
+// ── STATE ────────────────────────────────────────────────
+function load(){try{return JSON.parse(localStorage.getItem('lift7')||'{}')}catch{return{}}}
+function save(){localStorage.setItem('lift7',JSON.stringify(S))}
 let S=load();
 if(!S.programs)S.programs=[
   {id:'push',label:'Upper Push',exercises:['bp','ohp','incdb','lrise','tpd','ohtri']},
@@ -496,46 +472,41 @@ if(!S.chatHistory)S.chatHistory=[];
 save();
 
 let activeTab=S.programs[0]?.id||'';
-let activePage='workouts';
 let sessActive={},sessStart={},sessIv=null;
-let pendingPrograms=null; // AI-suggested programs awaiting user acceptance
+let pendingPrograms=null;
+let aiTyping=false;
+// chatHistory is the live array for the current session
+let chatHistory=[];
 
-// ══════════════════════════════════════════════════════════
-// BOOT
-// ══════════════════════════════════════════════════════════
+// ── BOOT ─────────────────────────────────────────────────
 document.getElementById('headerDate').textContent=
   new Date().toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short'}).toUpperCase();
 injectPWA();
 rebuildAll();
 renderCoachPage();
 
-// ══════════════════════════════════════════════════════════
-// PWA
-// ══════════════════════════════════════════════════════════
 function injectPWA(){
-  const m={name:'LIFT Workout Tracker',short_name:'LIFT',start_url:'./',display:'standalone',background_color:'#0d0d0f',theme_color:'#0d0d0f',icons:[{src:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230d0d0f"/><text y=".9em" font-size="80" x="10">🏋️</text></svg>',sizes:'any',type:'image/svg+xml'}]};
+  const m={name:'LIFT Workout Tracker',short_name:'LIFT',start_url:'./',display:'standalone',
+    background_color:'#0d0d0f',theme_color:'#0d0d0f',
+    icons:[{src:'data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><rect width="100" height="100" fill="%230d0d0f"/><text y=".9em" font-size="80" x="10">🏋️</text></svg>',sizes:'any',type:'image/svg+xml'}]};
   const blob=new Blob([JSON.stringify(m)],{type:'application/json'});
   document.getElementById('manifestLink').href=URL.createObjectURL(blob);
 }
 
-// ══════════════════════════════════════════════════════════
-// PAGE SWITCHING
-// ══════════════════════════════════════════════════════════
-function switchPage(page){
-  activePage=page;
-  document.querySelectorAll('.page').forEach(p=>p.classList.toggle('active',p.id==='page-'+page));
-  document.querySelectorAll('.main-nav-btn').forEach(b=>b.classList.toggle('active',b.id==='nav-'+page));
+// ── PAGE SWITCH ───────────────────────────────────────────
+function switchPage(p){
+  document.querySelectorAll('.page').forEach(x=>x.classList.toggle('active',x.id==='page-'+p));
+  document.querySelectorAll('.main-nav-btn').forEach(x=>x.classList.toggle('active',x.id==='nav-'+p));
 }
 
-// ══════════════════════════════════════════════════════════
-// WORKOUTS PAGE
-// ══════════════════════════════════════════════════════════
+// ── WORKOUTS ──────────────────────────────────────────────
 function rebuildAll(focusId){
   buildTabs();
   document.getElementById('main').innerHTML='';
   S.programs.forEach(p=>renderView(p.id));
   switchTab(focusId||activeTab||S.programs[0]?.id);
 }
+
 function buildTabs(){
   const nav=document.getElementById('tabNav');nav.innerHTML='';
   S.programs.forEach(p=>{
@@ -548,12 +519,14 @@ function buildTabs(){
     nav.appendChild(b);
   });
 }
+
 function switchTab(id){
   if(!S.programs.find(p=>p.id===id))id=S.programs[0]?.id;
   activeTab=id;
   document.querySelectorAll('.tab-btn').forEach(b=>b.classList.toggle('active',b.id==='tab-'+id));
   document.querySelectorAll('.wview').forEach(v=>v.classList.toggle('active',v.id==='view-'+id));
 }
+
 function addProgram(){
   const id='prog_'+Date.now();
   S.programs.push({id,label:'New Program',exercises:[]});
@@ -570,12 +543,12 @@ function openDeleteFromRename(){const id=renameProg;closeRename();setTimeout(()=
 let deleteProg=null;
 function openDelete(id){deleteProg=id;const p=S.programs.find(x=>x.id===id);document.getElementById('deleteMsg').textContent=`Delete "${p?.label}"? This removes the program and all its data.`;document.getElementById('deleteOverlay').classList.add('open');}
 function closeDelete(){document.getElementById('deleteOverlay').classList.remove('open');deleteProg=null;}
-function confirmDelete(){if(!deleteProg)return;const p=S.programs.find(x=>x.id===deleteProg);if(p)p.exercises.forEach(id=>{delete S['hist_'+id];});S.programs=S.programs.filter(x=>x.id!==deleteProg);save();closeDelete();activeTab=S.programs[0]?.id||'';rebuildAll();showToast('Program deleted');}
+function confirmDelete(){if(!deleteProg)return;S.programs=S.programs.filter(x=>x.id!==deleteProg);save();closeDelete();activeTab=S.programs[0]?.id||'';rebuildAll();showToast('Program deleted');}
 
-// ── render exercise views ──
+// render exercise views
 function exMap(){const m={};LIB.forEach(e=>m[e.id]=e);(S.customs||[]).forEach(e=>m[e.id]=e);return m;}
 function parseSets(tag){const m=(tag||'').match(/^(\d+)/);return m?+m[1]:3;}
-function getSetCount(exId,tag){return S.exSets?.[exId]??parseSets(tag);}
+function getSetCount(id,tag){return S.exSets?.[id]??parseSets(tag);}
 
 function renderView(progId){
   const old=document.getElementById('view-'+progId);if(old)old.remove();
@@ -583,15 +556,17 @@ function renderView(progId){
   const exIds=prog.exercises||[];const map=exMap();
   const view=document.createElement('div');view.className='wview';view.id='view-'+progId;
   let html='';
-  if(exIds.length===0){html=`<div class="empty-state"><div class="empty-ico">🏗️</div>No exercises yet.<br>Tap <strong>Build Workout</strong> to add exercises.</div>`;}
-  else{
+  if(!exIds.length){
+    html='<div class="empty-state"><div class="empty-ico">🏗️</div>No exercises yet.<br>Tap <strong>Build Workout</strong> to add exercises.</div>';
+  } else {
     const mainIds=exIds.filter(id=>{const e=map[id];return e&&!ACC_CATS.has(e.cat);});
     const accIds=exIds.filter(id=>{const e=map[id];return e&&ACC_CATS.has(e.cat);});
-    if(mainIds.length){html+=`<div class="sec-hdr"><span class="sec-lbl">EXERCISES</span><div class="sec-line"></div></div><div class="ex-list" id="exlist-main-${progId}">`;mainIds.forEach((id,i)=>{const e=map[id];if(e)html+=exCard(id,e,i);});html+=`</div>`;}
-    if(accIds.length){html+=`<div class="sec-hdr"><span class="sec-lbl">ACCESSORIES</span><div class="sec-line"></div></div><div class="ex-list" id="exlist-acc-${progId}">`;accIds.forEach((id,i)=>{const e=map[id];if(e)html+=exCard(id,e,i);});html+=`</div>`;}
+    if(mainIds.length){html+='<div class="sec-hdr"><span class="sec-lbl">EXERCISES</span><div class="sec-line"></div></div><div class="ex-list" id="exlist-main-'+progId+'">';mainIds.forEach((id,i)=>{const e=map[id];if(e)html+=exCard(id,e,i);});html+='</div>';}
+    if(accIds.length){html+='<div class="sec-hdr"><span class="sec-lbl">ACCESSORIES</span><div class="sec-line"></div></div><div class="ex-list" id="exlist-acc-'+progId+'">';accIds.forEach((id,i)=>{const e=map[id];if(e)html+=exCard(id,e,i);});html+='</div>';}
   }
   const built=exIds.length>0,inSess=!!sessActive[progId];
-  html+=`<div class="action-row">${built&&!inSess?`<button class="start-btn" id="sb-${progId}" onclick="startSession('${progId}')">▶ START SESSION</button>`:''}<button class="build-btn" onclick="openBuilder('${progId}')">${built?'✎ EDIT WORKOUT':'＋ BUILD WORKOUT'}</button></div><div class="action-row" style="padding-top:0"><button class="finish-btn ${inSess?'show':''}" id="fb-${progId}" onclick="finishSession('${progId}')">✓ FINISH SESSION</button></div>`;
+  html+='<div class="action-row">'+(built&&!inSess?`<button class="start-btn" id="sb-${progId}" onclick="startSession('${progId}')">▶ START SESSION</button>`:'')+`<button class="build-btn" onclick="openBuilder('${progId}')">`+(built?'✎ EDIT WORKOUT':'＋ BUILD WORKOUT')+'</button></div>';
+  html+=`<div class="action-row" style="padding-top:0"><button class="finish-btn ${inSess?'show':''}" id="fb-${progId}" onclick="finishSession('${progId}')">✓ FINISH SESSION</button></div>`;
   view.innerHTML=html;
   document.getElementById('main').appendChild(view);
   attachListeners(progId);initDrag(progId);
@@ -599,82 +574,124 @@ function renderView(progId){
 
 function exCard(id,ex,idx){
   const prev=S['hist_'+id];const sets=getSetCount(id,ex.tag);
-  const prevSum=prev?`${prev.maxWeight}kg · last session`:ex.tag;
+  const prevSum=prev?prev.maxWeight+'kg · last session':ex.tag;
   const prTag=prev?.pr?`<span class="ex-pr">PR ${prev.pr}kg</span>`:'';
   const note=S.exNotes?.[id]||'';
   let rows='';
-  for(let s=1;s<=sets;s++){const ps=prev?.sets?.[s-1];const pw=ps?.weight||'',pr2=ps?.reps||'';const pd=(pw&&pr2)?`${pw}×${pr2}`:'—';rows+=`<tr class="set-row" id="sr-${id}-${s}"><td class="snum">${s}</td><td class="prev-v">${pd}</td><td><input class="sinput" type="number" id="w-${id}-${s}" placeholder="${pw||'kg'}" min="0" step="0.5"></td><td><input class="sinput" type="number" id="r-${id}-${s}" placeholder="${pr2||'reps'}" min="0" step="1"></td><td><button class="cbtn" id="cb-${id}-${s}" data-exid="${id}" data-set="${s}" data-total="${sets}">✓</button></td></tr>`;}
-  return `<div class="ex-card" id="card-${id}" draggable="true" data-exid="${id}"><div class="ex-hdr"><div class="drag-handle" touch-action="none">⠿</div><div class="ex-num">${String(idx+1).padStart(2,'0')}</div><div class="ex-info" onclick="toggleCard('${id}')"><div class="ex-name">${ex.name}</div><div class="ex-meta">${sets} sets · ${prevSum}</div></div>${prTag}<span class="ex-chev" onclick="toggleCard('${id}')">▼</span></div><div class="sets-wrap"><div class="ex-notes-wrap"><textarea class="ex-notes" id="note-${id}" rows="2" placeholder="Cue notes… (e.g. wider grip, pause at bottom)" onchange="saveNote('${id}',this.value)">${note}</textarea></div><table class="sets-tbl"><thead><tr><th style="text-align:left">SET</th><th>PREV</th><th>KG</th><th>REPS</th><th>✓</th></tr></thead><tbody>${rows}</tbody></table><div class="sets-footer"><button class="add-set-btn" data-exid="${id}">+ ADD SET</button><div class="set-count-ctrl"><button class="scc-btn" data-exid="${id}" data-action="dec">−</button><span class="scc-label" id="scc-${id}">${sets} SETS</span><button class="scc-btn" data-exid="${id}" data-action="inc">+</button></div></div></div></div>`;
+  for(let s=1;s<=sets;s++){
+    const ps=prev?.sets?.[s-1];const pw=ps?.weight||'';const pr2=ps?.reps||'';
+    const pd=(pw&&pr2)?pw+'×'+pr2:'—';
+    rows+=`<tr class="set-row" id="sr-${id}-${s}"><td class="snum">${s}</td><td class="prev-v">${pd}</td><td><input class="sinput" type="number" id="w-${id}-${s}" placeholder="${pw||'kg'}" min="0" step="0.5"></td><td><input class="sinput" type="number" id="r-${id}-${s}" placeholder="${pr2||'reps'}" min="0" step="1"></td><td><button class="cbtn" id="cb-${id}-${s}" data-exid="${id}" data-set="${s}" data-total="${sets}">✓</button></td></tr>`;
+  }
+  return `<div class="ex-card" id="card-${id}" draggable="true" data-exid="${id}">
+    <div class="ex-hdr">
+      <div class="drag-handle" touch-action="none">⠿</div>
+      <div class="ex-num">${String(idx+1).padStart(2,'0')}</div>
+      <div class="ex-info" onclick="toggleCard('${id}')"><div class="ex-name">${ex.name}</div><div class="ex-meta">${sets} sets · ${prevSum}</div></div>
+      ${prTag}<span class="ex-chev" onclick="toggleCard('${id}')">▼</span>
+    </div>
+    <div class="sets-wrap">
+      <div class="ex-notes-wrap"><textarea class="ex-notes" id="note-${id}" rows="2" placeholder="Cue notes… (e.g. wider grip, pause at bottom)" onchange="saveNote('${id}',this.value)">${note}</textarea></div>
+      <table class="sets-tbl"><thead><tr><th style="text-align:left">SET</th><th>PREV</th><th>KG</th><th>REPS</th><th>✓</th></tr></thead><tbody>${rows}</tbody></table>
+      <div class="sets-footer">
+        <button class="add-set-btn" data-exid="${id}">+ ADD SET</button>
+        <div class="set-count-ctrl">
+          <button class="scc-btn" data-exid="${id}" data-action="dec">−</button>
+          <span class="scc-label" id="scc-${id}">${sets} SETS</span>
+          <button class="scc-btn" data-exid="${id}" data-action="inc">+</button>
+        </div>
+      </div>
+    </div>
+  </div>`;
 }
+
 function toggleCard(id){document.getElementById('card-'+id)?.classList.toggle('expanded');}
+
 function attachListeners(progId){
   const view=document.getElementById('view-'+progId);if(!view)return;
   view.querySelectorAll('.cbtn').forEach(btn=>btn.addEventListener('click',()=>completeSet(btn.dataset.exid,+btn.dataset.set,+btn.dataset.total)));
   view.querySelectorAll('.add-set-btn').forEach(btn=>btn.addEventListener('click',()=>addSet(btn.dataset.exid)));
   view.querySelectorAll('.scc-btn').forEach(btn=>btn.addEventListener('click',()=>adjustSetCount(btn.dataset.exid,btn.dataset.action)));
 }
-function saveNote(exId,val){if(!S.exNotes)S.exNotes={};S.exNotes[exId]=val.trim();save();}
+
+function saveNote(id,val){if(!S.exNotes)S.exNotes={};S.exNotes[id]=val.trim();save();}
+
 function adjustSetCount(exId,action){
   const map=exMap();const ex=map[exId];if(!ex)return;
   let cur=getSetCount(exId,ex.tag);
-  if(action==='inc')cur=Math.min(cur+1,10);else cur=Math.max(cur-1,1);
+  cur=action==='inc'?Math.min(cur+1,10):Math.max(cur-1,1);
   if(!S.exSets)S.exSets={};S.exSets[exId]=cur;save();
   const lbl=document.getElementById('scc-'+exId);if(lbl)lbl.textContent=cur+' SETS';
   const card=document.getElementById('card-'+exId);if(!card)return;
   const tbody=card.querySelector('tbody');const prev=S['hist_'+exId];const curRows=tbody.querySelectorAll('tr').length;
-  if(cur>curRows){for(let s=curRows+1;s<=cur;s++){const ps=prev?.sets?.[s-1];const pw=ps?.weight||'',pr2=ps?.reps||'';const pd=(pw&&pr2)?`${pw}×${pr2}`:'—';const tr=document.createElement('tr');tr.className='set-row';tr.id=`sr-${exId}-${s}`;tr.innerHTML=`<td class="snum">${s}</td><td class="prev-v">${pd}</td><td><input class="sinput" type="number" id="w-${exId}-${s}" placeholder="${pw||'kg'}" min="0" step="0.5"></td><td><input class="sinput" type="number" id="r-${exId}-${s}" placeholder="${pr2||'reps'}" min="0" step="1"></td><td><button class="cbtn" id="cb-${exId}-${s}" data-exid="${exId}" data-set="${s}" data-total="${cur}">✓</button></td>`;tbody.appendChild(tr);tr.querySelector('.cbtn').addEventListener('click',()=>completeSet(exId,s,cur));}}
-  else{while(tbody.querySelectorAll('tr').length>cur)tbody.lastChild.remove();}
+  if(cur>curRows){
+    for(let s=curRows+1;s<=cur;s++){
+      const ps=prev?.sets?.[s-1];const pw=ps?.weight||'';const pr2=ps?.reps||'';const pd=(pw&&pr2)?pw+'×'+pr2:'—';
+      const tr=document.createElement('tr');tr.className='set-row';tr.id=`sr-${exId}-${s}`;
+      tr.innerHTML=`<td class="snum">${s}</td><td class="prev-v">${pd}</td><td><input class="sinput" type="number" id="w-${exId}-${s}" placeholder="${pw||'kg'}" min="0" step="0.5"></td><td><input class="sinput" type="number" id="r-${exId}-${s}" placeholder="${pr2||'reps'}" min="0" step="1"></td><td><button class="cbtn" id="cb-${exId}-${s}" data-exid="${exId}" data-set="${s}" data-total="${cur}">✓</button></td>`;
+      tbody.appendChild(tr);tr.querySelector('.cbtn').addEventListener('click',()=>completeSet(exId,s,cur));
+    }
+  } else { while(tbody.querySelectorAll('tr').length>cur)tbody.lastChild.remove(); }
   tbody.querySelectorAll('.cbtn').forEach(b=>b.dataset.total=cur);
-  const meta=card.querySelector('.ex-meta');if(meta){const p=S['hist_'+exId];meta.textContent=`${cur} sets · ${p?p.maxWeight+'kg · last session':ex.tag}`;}
+  const meta=card.querySelector('.ex-meta');if(meta){const p=S['hist_'+exId];meta.textContent=cur+' sets · '+(p?p.maxWeight+'kg · last session':ex.tag);}
 }
+
 function completeSet(exId,setNum,total){
-  const wEl=document.getElementById(`w-${exId}-${setNum}`);const rEl=document.getElementById(`r-${exId}-${setNum}`);const btn=document.getElementById(`cb-${exId}-${setNum}`);
+  const wEl=document.getElementById('w-'+exId+'-'+setNum);
+  const rEl=document.getElementById('r-'+exId+'-'+setNum);
+  const btn=document.getElementById('cb-'+exId+'-'+setNum);
   if(!wEl||!rEl||!btn)return;
-  const w=parseFloat(wEl.value)||parseFloat(wEl.placeholder)||0;const r=parseInt(rEl.value)||parseInt(rEl.placeholder)||0;
+  const w=parseFloat(wEl.value)||parseFloat(wEl.placeholder)||0;
+  const r=parseInt(rEl.value)||parseInt(rEl.placeholder)||0;
   if(!w&&!r){showToast('Enter weight & reps first');return;}
   btn.classList.toggle('done');
-  if(btn.classList.contains('done')){if(!wEl.value&&wEl.placeholder!=='kg')wEl.value=wEl.placeholder;if(!rEl.value&&rEl.placeholder!=='reps')rEl.value=rEl.placeholder;wEl.classList.add('locked');rEl.classList.add('locked');if(setNum<total){startTimer(120);showToast(`Set ${setNum} done · Rest timer started`);}else showToast(`All sets complete · 💪`);}
-  else{wEl.classList.remove('locked');rEl.classList.remove('locked');}
+  if(btn.classList.contains('done')){
+    if(!wEl.value&&wEl.placeholder!=='kg')wEl.value=wEl.placeholder;
+    if(!rEl.value&&rEl.placeholder!=='reps')rEl.value=rEl.placeholder;
+    wEl.classList.add('locked');rEl.classList.add('locked');
+    if(setNum<total){startTimer(120);showToast('Set '+setNum+' done · Rest timer started');}
+    else showToast('All sets complete · 💪');
+  } else {wEl.classList.remove('locked');rEl.classList.remove('locked');}
 }
+
 function addSet(exId){
   const card=document.getElementById('card-'+exId);if(!card)return;
   const tbody=card.querySelector('tbody');const n=tbody.querySelectorAll('tr').length+1;
-  const tr=document.createElement('tr');tr.className='set-row';tr.id=`sr-${exId}-${n}`;
-  tr.innerHTML=`<td class="snum">${n}</td><td class="prev-v">—</td><td><input class="sinput" type="number" id="w-${exId}-${n}" placeholder="kg" min="0" step="0.5"></td><td><input class="sinput" type="number" id="r-${exId}-${n}" placeholder="reps" min="0" step="1"></td><td><button class="cbtn" id="cb-${exId}-${n}" data-exid="${exId}" data-set="${n}" data-total="${n}">✓</button></td>`;
+  const tr=document.createElement('tr');tr.className='set-row';tr.id='sr-'+exId+'-'+n;
+  tr.innerHTML='<td class="snum">'+n+'</td><td class="prev-v">—</td><td><input class="sinput" type="number" id="w-'+exId+'-'+n+'" placeholder="kg" min="0" step="0.5"></td><td><input class="sinput" type="number" id="r-'+exId+'-'+n+'" placeholder="reps" min="0" step="1"></td><td><button class="cbtn" id="cb-'+exId+'-'+n+'" data-exid="'+exId+'" data-set="'+n+'" data-total="'+n+'">✓</button></td>';
   tbody.appendChild(tr);tr.querySelector('.cbtn').addEventListener('click',()=>completeSet(exId,n,n));
   if(!S.exSets)S.exSets={};S.exSets[exId]=n;save();
   const lbl=document.getElementById('scc-'+exId);if(lbl)lbl.textContent=n+' SETS';
   tbody.querySelectorAll('.cbtn').forEach(b=>b.dataset.total=n);
 }
 
-// drag
 function initDrag(progId){
   ['main','acc'].forEach(sec=>{
-    const list=document.getElementById(`exlist-${sec}-${progId}`);if(!list)return;
+    const list=document.getElementById('exlist-'+sec+'-'+progId);if(!list)return;
     let dragSrc=null;
     list.querySelectorAll('.ex-card').forEach(card=>{
       const handle=card.querySelector('.drag-handle');
       card.addEventListener('dragstart',e=>{dragSrc=card;card.classList.add('dragging');e.dataTransfer.effectAllowed='move';e.dataTransfer.setData('text/plain',card.dataset.exid);});
       card.addEventListener('dragend',()=>{card.classList.remove('dragging');list.querySelectorAll('.ex-card').forEach(c=>c.classList.remove('drag-over'));persistOrder(progId);});
-      card.addEventListener('dragover',e=>{e.preventDefault();e.dataTransfer.dropEffect='move';if(card!==dragSrc){list.querySelectorAll('.ex-card').forEach(c=>c.classList.remove('drag-over'));card.classList.add('drag-over');}});
+      card.addEventListener('dragover',e=>{e.preventDefault();if(card!==dragSrc){list.querySelectorAll('.ex-card').forEach(c=>c.classList.remove('drag-over'));card.classList.add('drag-over');}});
       card.addEventListener('drop',e=>{e.preventDefault();if(dragSrc&&dragSrc!==card){const cards=[...list.querySelectorAll('.ex-card')];const si=cards.indexOf(dragSrc),ti=cards.indexOf(card);if(si<ti)list.insertBefore(dragSrc,card.nextSibling);else list.insertBefore(dragSrc,card);}list.querySelectorAll('.ex-card').forEach(c=>c.classList.remove('drag-over'));});
       let clone=null;
-      handle.addEventListener('touchstart',e=>{const t=e.touches[0];dragSrc=card;card.classList.add('dragging');clone=card.cloneNode(true);clone.style.cssText=`position:fixed;left:10px;right:10px;opacity:.8;pointer-events:none;z-index:9999;top:${card.getBoundingClientRect().top}px;`;document.body.appendChild(clone);},{passive:true});
+      handle.addEventListener('touchstart',e=>{dragSrc=card;card.classList.add('dragging');clone=card.cloneNode(true);clone.style.cssText='position:fixed;left:10px;right:10px;opacity:.8;pointer-events:none;z-index:9999;top:'+card.getBoundingClientRect().top+'px;';document.body.appendChild(clone);},{passive:true});
       handle.addEventListener('touchmove',e=>{e.preventDefault();const t=e.touches[0];if(clone)clone.style.top=(t.clientY-40)+'px';const el=document.elementFromPoint(t.clientX,t.clientY);if(!el)return;const target=el.closest('.ex-card');if(target&&target!==dragSrc&&target.parentNode===list){list.querySelectorAll('.ex-card').forEach(c=>c.classList.remove('drag-over'));target.classList.add('drag-over');const rect=target.getBoundingClientRect();if(t.clientY<rect.top+rect.height/2)list.insertBefore(dragSrc,target);else list.insertBefore(dragSrc,target.nextSibling);}},{passive:false});
       handle.addEventListener('touchend',()=>{if(clone){clone.remove();clone=null;}card.classList.remove('dragging');list.querySelectorAll('.ex-card').forEach(c=>c.classList.remove('drag-over'));persistOrder(progId);});
     });
   });
 }
+
 function persistOrder(progId){
   const prog=S.programs.find(p=>p.id===progId);if(!prog)return;
-  const ml=document.getElementById(`exlist-main-${progId}`);const al=document.getElementById(`exlist-acc-${progId}`);
+  const ml=document.getElementById('exlist-main-'+progId);const al=document.getElementById('exlist-acc-'+progId);
   const mi=ml?[...ml.querySelectorAll('.ex-card')].map(c=>c.dataset.exid):[];
   const ai=al?[...al.querySelectorAll('.ex-card')].map(c=>c.dataset.exid):[];
   prog.exercises=[...mi,...ai];save();
   [...(ml?.querySelectorAll('.ex-card')||[]),...(al?.querySelectorAll('.ex-card')||[])].forEach((c,i)=>{const n=c.querySelector('.ex-num');if(n)n.textContent=String(i+1).padStart(2,'0');});
 }
 
-// session
 function startSession(progId){
   sessActive[progId]=true;sessStart[progId]=Date.now();
   const sb=document.getElementById('sb-'+progId);const fb=document.getElementById('fb-'+progId);
@@ -686,6 +703,7 @@ function startSession(progId){
   if(sessIv)clearInterval(sessIv);
   sessIv=setInterval(()=>{const src=sessStart[activeTab];if(!src)return;const e=Math.floor((Date.now()-src)/1000);document.getElementById('selapsed').textContent=String(Math.floor(e/60)).padStart(2,'0')+':'+String(e%60).padStart(2,'0');},1000);
 }
+
 function finishSession(progId){
   const prog=S.programs.find(p=>p.id===progId);if(!prog)return;
   const map=exMap();
@@ -702,12 +720,26 @@ function finishSession(progId){
   dismissTimer();showToast('Session saved · Well done! 🏆');renderView(progId);switchTab(progId);
 }
 
-// history
 function openHistory(){
   const body=document.getElementById('historyBody');body.innerHTML='';
   const hist=S.history||[];
-  if(!hist.length){body.innerHTML='<div class="history-empty">No sessions recorded yet.</div>';}
-  else{hist.forEach(sess=>{const d=new Date(sess.date);const ds=d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short',year:'numeric'});const ts=d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});const vol=sess.totalVol?`${Math.round(sess.totalVol).toLocaleString()} kg vol`:'';const dur=sess.duration?`${Math.floor(sess.duration/60)}m ${sess.duration%60}s`:'';const meta=[vol,dur].filter(Boolean).join(' · ');const div=document.createElement('div');div.className='hist-session';let exHTML='';(sess.exercises||[]).forEach(ex=>{const ss=ex.sets.map((s,i)=>`Set ${i+1}: ${s.weight}kg × ${s.reps}`).join(' · ');exHTML+=`<div class="hist-ex-row"><div class="hist-ex-name">${ex.name}</div><div class="hist-sets">${ss}</div></div>`;});div.innerHTML=`<div class="hist-session-hdr" onclick="this.parentElement.classList.toggle('open')"><div><div class="hist-date">${ds} · ${ts}</div><div class="hist-prog">${sess.progLabel}<button class="hist-del-btn" onclick="deleteHistSession('${sess.id}',event)">✕</button></div>${meta?`<div class="hist-vol">${meta}</div>`:''}</div><span class="hist-chev">▼</span></div><div class="hist-exercises">${exHTML}</div>`;body.appendChild(div);});}
+  if(!hist.length){body.innerHTML='<div class="history-empty">No sessions recorded yet.</div>';return;}
+  hist.forEach(sess=>{
+    const d=new Date(sess.date);
+    const ds=d.toLocaleDateString('en-GB',{weekday:'short',day:'numeric',month:'short',year:'numeric'});
+    const ts=d.toLocaleTimeString('en-GB',{hour:'2-digit',minute:'2-digit'});
+    const vol=sess.totalVol?Math.round(sess.totalVol).toLocaleString()+' kg vol':'';
+    const dur=sess.duration?Math.floor(sess.duration/60)+'m '+sess.duration%60+'s':'';
+    const meta=[vol,dur].filter(Boolean).join(' · ');
+    const div=document.createElement('div');div.className='hist-session';
+    let exHTML='';
+    (sess.exercises||[]).forEach(ex=>{
+      const ss=ex.sets.map((s,i)=>'Set '+(i+1)+': '+s.weight+'kg × '+s.reps).join(' · ');
+      exHTML+='<div class="hist-ex-row"><div class="hist-ex-name">'+ex.name+'</div><div class="hist-sets">'+ss+'</div></div>';
+    });
+    div.innerHTML='<div class="hist-session-hdr" onclick="this.parentElement.classList.toggle(\'open\')"><div><div class="hist-date">'+ds+' · '+ts+'</div><div class="hist-prog">'+sess.progLabel+'<button class="hist-del-btn" onclick="deleteHistSession(\''+sess.id+'\',event)">✕</button></div>'+(meta?'<div class="hist-vol">'+meta+'</div>':'')+'</div><span class="hist-chev">▼</span></div><div class="hist-exercises">'+exHTML+'</div>';
+    body.appendChild(div);
+  });
   document.getElementById('historyOverlay').classList.add('open');
 }
 function closeHistory(){document.getElementById('historyOverlay').classList.remove('open');}
@@ -715,128 +747,133 @@ function deleteHistSession(id,e){e.stopPropagation();S.history=(S.history||[]).f
 
 // builder
 let bProgId=null,bSel=new Set(),bActiveCat='All';
-function openBuilder(progId){bProgId=progId;bActiveCat='All';bSel=new Set(S.programs.find(p=>p.id===progId)?.exercises||[]);document.getElementById('sheetTitle').textContent='BUILD: '+(S.programs.find(p=>p.id===progId)?.label||'').toUpperCase();document.getElementById('sheetSearch').value='';buildCatTabs();renderSheet('');document.getElementById('builderOverlay').classList.add('open');}
+function openBuilder(progId){
+  bProgId=progId;bActiveCat='All';
+  bSel=new Set(S.programs.find(p=>p.id===progId)?.exercises||[]);
+  document.getElementById('sheetTitle').textContent='BUILD: '+(S.programs.find(p=>p.id===progId)?.label||'').toUpperCase();
+  document.getElementById('sheetSearch').value='';
+  buildCatTabs();renderSheet('');
+  document.getElementById('builderOverlay').classList.add('open');
+}
 function closeBuilder(){document.getElementById('builderOverlay').classList.remove('open');bProgId=null;}
-function buildCatTabs(){const wrap=document.getElementById('catTabs');wrap.innerHTML='';['All',...CAT_ORDER,'My Exercises'].forEach(c=>{const b=document.createElement('button');b.className='cat-tab'+(c===bActiveCat?' on':'');b.textContent=c;b.onclick=()=>{bActiveCat=c;document.querySelectorAll('.cat-tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');renderSheet(document.getElementById('sheetSearch').value);};wrap.appendChild(b);});}
+function buildCatTabs(){
+  const wrap=document.getElementById('catTabs');wrap.innerHTML='';
+  ['All',...CAT_ORDER,'My Exercises'].forEach(c=>{
+    const b=document.createElement('button');b.className='cat-tab'+(c===bActiveCat?' on':'');b.textContent=c;
+    b.onclick=()=>{bActiveCat=c;document.querySelectorAll('.cat-tab').forEach(x=>x.classList.remove('on'));b.classList.add('on');renderSheet(document.getElementById('sheetSearch').value);};
+    wrap.appendChild(b);
+  });
+}
 function filterBuilder(v){renderSheet(v);}
 function renderSheet(filter){
   const body=document.getElementById('sheetBody');body.innerHTML='';const f=filter.toLowerCase();
-  const catsToShow=bActiveCat==='All'?CAT_ORDER:bActiveCat==='My Exercises'?[]:[bActiveCat];
-  catsToShow.forEach(cat=>{const items=LIB.filter(e=>e.cat===cat&&(!f||e.name.toLowerCase().includes(f)));if(!items.length)return;body.appendChild(buildCatSection(cat,items));});
+  const cats=bActiveCat==='All'?CAT_ORDER:bActiveCat==='My Exercises'?[]:[bActiveCat];
+  cats.forEach(cat=>{const items=LIB.filter(e=>e.cat===cat&&(!f||e.name.toLowerCase().includes(f)));if(!items.length)return;body.appendChild(buildCatSection(cat,items));});
   const customs=(S.customs||[]).filter(e=>!f||e.name.toLowerCase().includes(f));
   if((bActiveCat==='All'||bActiveCat==='My Exercises')&&customs.length)body.appendChild(buildCatSection('My Exercises',customs));
-  if(bActiveCat==='All'||bActiveCat==='My Exercises'){const cdiv=document.createElement('div');cdiv.className='bcat';cdiv.innerHTML=`<span class="bcat-lbl">ADD CUSTOM</span><div class="custom-row"><input class="custom-input" id="custIn" type="text" placeholder="Exercise name…"><select class="custom-cat-sel" id="custCat">${CAT_ORDER.map(c=>`<option value="${c}">${c}</option>`).join('')}</select><button class="custom-add" onclick="addCustom()">ADD</button></div>`;body.appendChild(cdiv);}
+  if(bActiveCat==='All'||bActiveCat==='My Exercises'){
+    const cdiv=document.createElement('div');cdiv.className='bcat';
+    cdiv.innerHTML='<span class="bcat-lbl">ADD CUSTOM</span><div class="custom-row"><input class="custom-input" id="custIn" type="text" placeholder="Exercise name…"><select class="custom-cat-sel" id="custCat">'+CAT_ORDER.map(c=>'<option value="'+c+'">'+c+'</option>').join('')+'</select><button class="custom-add" onclick="addCustom()">ADD</button></div>';
+    body.appendChild(cdiv);
+  }
 }
-function buildCatSection(cat,items){const div=document.createElement('div');div.className='bcat';div.innerHTML=`<span class="bcat-lbl">${cat}</span><div class="bex-list"></div>`;const list=div.querySelector('.bex-list');items.forEach(ex=>{const sel=bSel.has(ex.id);const row=document.createElement('div');row.className='bex-row'+(sel?' sel':'');row.innerHTML=`<div class="bex-chk">${sel?'✓':''}</div><span class="bex-name">${ex.name}</span><span class="bex-tag">${ex.tag||''}</span>`;row.onclick=()=>{if(bSel.has(ex.id)){bSel.delete(ex.id);row.classList.remove('sel');row.querySelector('.bex-chk').textContent='';}else{bSel.add(ex.id);row.classList.add('sel');row.querySelector('.bex-chk').textContent='✓';}};list.appendChild(row);});return div;}
-function addCustom(){const inp=document.getElementById('custIn');const name=inp.value.trim();if(!name){showToast('Enter a name first');return;}const id='custom_'+Date.now();const cat=document.getElementById('custCat')?.value||'Accessories';S.customs.push({id,name,cat,tag:'3×10–12'});if(['Core','Legs','Accessories'].includes(cat))ACC_CATS.add(id);save();bSel.add(id);inp.value='';renderSheet(document.getElementById('sheetSearch').value);showToast(`"${name}" added & selected`);}
-function saveBuilder(){const prog=S.programs.find(p=>p.id===bProgId);if(!prog)return;const existing=prog.exercises.filter(id=>bSel.has(id));const added=[...bSel].filter(id=>!prog.exercises.includes(id));prog.exercises=[...existing,...added];save();closeBuilder();renderView(bProgId);switchTab(bProgId);showToast('Workout saved!');}
+function buildCatSection(cat,items){
+  const div=document.createElement('div');div.className='bcat';
+  div.innerHTML='<span class="bcat-lbl">'+cat+'</span><div class="bex-list"></div>';
+  const list=div.querySelector('.bex-list');
+  items.forEach(ex=>{
+    const sel=bSel.has(ex.id);
+    const row=document.createElement('div');row.className='bex-row'+(sel?' sel':'');
+    row.innerHTML='<div class="bex-chk">'+(sel?'✓':'')+'</div><span class="bex-name">'+ex.name+'</span><span class="bex-tag">'+(ex.tag||'')+'</span>';
+    row.onclick=()=>{if(bSel.has(ex.id)){bSel.delete(ex.id);row.classList.remove('sel');row.querySelector('.bex-chk').textContent='';}else{bSel.add(ex.id);row.classList.add('sel');row.querySelector('.bex-chk').textContent='✓';}};
+    list.appendChild(row);
+  });
+  return div;
+}
+function addCustom(){
+  const inp=document.getElementById('custIn');const name=inp.value.trim();if(!name){showToast('Enter a name first');return;}
+  const id='custom_'+Date.now();const cat=document.getElementById('custCat')?.value||'Accessories';
+  S.customs.push({id,name,cat,tag:'3×10–12'});if(['Core','Legs','Accessories'].includes(cat))ACC_CATS.add(id);
+  save();bSel.add(id);inp.value='';renderSheet(document.getElementById('sheetSearch').value);showToast('"'+name+'" added & selected');
+}
+function saveBuilder(){
+  const prog=S.programs.find(p=>p.id===bProgId);if(!prog)return;
+  const existing=prog.exercises.filter(id=>bSel.has(id));
+  const added=[...bSel].filter(id=>!prog.exercises.includes(id));
+  prog.exercises=[...existing,...added];save();closeBuilder();renderView(bProgId);switchTab(bProgId);showToast('Workout saved!');
+}
 
-// ══════════════════════════════════════════════════════════
-// AI COACH PAGE
-// ══════════════════════════════════════════════════════════
-const COACH_SYSTEM = `You are an expert personal trainer and strength coach embedded in the LIFT workout app.
-Your role is to design personalised weekly workout programs through a friendly, conversational interview.
+// ── AI COACH ──────────────────────────────────────────────
+const SYSTEM_PROMPT=`You are an expert personal trainer embedded in the LIFT workout app. Your job is to design personalised weekly workout programs through a friendly conversation.
 
-INTERVIEW FLOW — gather these if not already known:
-1. Training goal (hypertrophy, strength, fat loss, general fitness, athletic performance)
-2. Training days per week (2–6)
-3. Experience level (beginner, intermediate, advanced)
-4. Available equipment (barbell, dumbbells, cables, machines, bodyweight only)
-5. Any injuries or limitations
-6. Session duration available
+ALWAYS start by asking (in one message, friendly and concise):
+1. How many days per week they want to train
+2. Their main goal (hypertrophy/muscle building, strength, fat loss, general fitness)
+3. Their experience level (beginner, intermediate, advanced)
+4. Available equipment
 
-Once you have enough info (you can ask multiple questions at once), generate a COMPLETE weekly program.
-
-PROGRAM OUTPUT FORMAT — when ready to generate, you MUST respond with a JSON block inside <PROGRAMS> tags followed by a brief plain-text explanation. Like this:
+Once you have this info, generate a complete weekly program in this EXACT format — include the <PROGRAMS> block with valid JSON:
 
 <PROGRAMS>
 [
   {
     "label": "Day 1 — Upper Push",
     "exercises": [
-      {"name": "Barbell Bench Press", "sets": 4, "reps": "6–8", "rest": "3 min", "notes": "Pause 1s at chest"},
-      {"name": "Overhead Press", "sets": 4, "reps": "6–8", "rest": "3 min", "notes": ""},
-      {"name": "Incline Dumbbell Press", "sets": 3, "reps": "10–12", "rest": "2 min", "notes": ""},
-      {"name": "Cable Lateral Raise", "sets": 3, "reps": "12–15", "rest": "90s", "notes": ""},
-      {"name": "Tricep Pushdown", "sets": 3, "reps": "12–15", "rest": "90s", "notes": ""}
+      {"name": "Barbell Bench Press", "sets": 4, "reps": "6-8", "rest": "3 min", "notes": ""},
+      {"name": "Overhead Press", "sets": 4, "reps": "6-8", "rest": "3 min", "notes": ""}
     ]
   }
 ]
 </PROGRAMS>
 
-Then your plain text explanation after the tag.
+After the block write a brief plain-text summary.
 
-RULES:
-- Match exercises to available equipment. No barbell work if they only have dumbbells.
-- Scale volume to experience (beginners: fewer exercises, fewer sets)
-- Use the exercise names from this library where possible: ${LIB.map(e=>e.name).join(', ')}
-- Custom exercises are fine if not in the library
-- Be warm, encouraging, and concise — this is a gym app, not an essay
-- If the user wants to refine the program, adjust and re-output the full <PROGRAMS> block
-- Always remember previously stated goals and don't ask for them again`;
-
-let chatHistory = [];
-let aiTyping = false;
+Rules:
+- Match exercises to available equipment
+- Scale volume to experience level
+- Be warm and concise
+- If asked to refine, output the full <PROGRAMS> block again with changes applied
+- Never ask for info the user already gave`;
 
 function renderCoachPage(){
-  const page=document.getElementById('aiPage');
-  page.innerHTML='';
-
-  // Banner
-  page.innerHTML+=`<div class="ai-banner">
-    <div class="ai-banner-title">✦ AI COACH</div>
-    <div class="ai-banner-sub">Tell me your goals and I'll build a personalised weekly program for you — then we can refine it together before adding it to your workouts.</div>
-  </div>`;
-
-  // Saved goals card
+  const page=document.getElementById('aiPage');page.innerHTML='';
+  page.innerHTML='<div class="ai-banner"><div class="ai-banner-title">✦ AI COACH</div><div class="ai-banner-sub">Tell me your goals and I\'ll design a personalised weekly program — then we can refine it together before adding it to your workouts.</div></div>';
   if(S.goals){
-    page.innerHTML+=`<div class="goals-card">
-      <div class="goals-card-hdr">
-        <span class="goals-card-lbl">YOUR GOALS</span>
-        <button class="goals-edit-btn" onclick="clearGoals()">CLEAR</button>
-      </div>
-      <div class="goals-text">${escHtml(S.goals)}</div>
-    </div>`;
+    page.innerHTML+='<div class="goals-card"><div class="goals-card-hdr"><span class="goals-card-lbl">YOUR GOALS</span><button class="goals-edit-btn" onclick="clearGoals()">CLEAR</button></div><div class="goals-text">'+escHtml(S.goals)+'</div></div>';
+  }
+  page.innerHTML+='<div class="chat-wrap" id="chatWrap"></div>';
+  page.innerHTML+='<button class="new-chat-btn" onclick="newChat()">↺ NEW CONVERSATION</button>';
+  page.innerHTML+='<div class="chat-input-row"><textarea class="chat-textarea" id="chatInput" rows="2" placeholder="Type here…"></textarea><button class="chat-send-btn" id="chatSendBtn" onclick="sendChat()">➤</button></div>';
+
+  // Load saved history into live array
+  chatHistory=[...(S.chatHistory||[])];
+  renderAllBubbles();
+
+  // If no history at all, send an opening message from the AI
+  if(chatHistory.length===0){
+    const greeting=S.goals
+      ? 'Welcome back! I can see your saved goals. Ready to build or update your program? Just let me know if anything has changed, or I can design something right now.'
+      : 'Hey! I\'m your AI coach. Let\'s build your personalised weekly program.\n\nTo get started — **how many days a week are you training**, and **what\'s your main goal?** (e.g. build muscle, get stronger, lose fat)';
+    // Save the greeting to history so it's included in future API calls
+    chatHistory.push({role:'assistant',content:greeting});
+    S.chatHistory=chatHistory.slice(-40);save();
+    appendAIBubble(greeting);
   }
 
-  // Chat area
-  page.innerHTML+=`<div class="chat-wrap" id="chatWrap"></div>`;
-  page.innerHTML+=`<button class="new-chat-btn" onclick="newChat()">↺ NEW CONVERSATION</button>`;
-  page.innerHTML+=`<div class="chat-input-row">
-    <textarea class="chat-textarea" id="chatInput" rows="2" placeholder="Describe your goals or ask anything…"></textarea>
-    <button class="chat-send-btn" id="chatSendBtn" onclick="sendChat()">➤</button>
-  </div>`;
-
-  // Restore history
-  chatHistory=[...(S.chatHistory||[])];
-  renderChatHistory();
-
-  // If no history, trigger opening message from AI
-  if(chatHistory.length===0) triggerOpeningMessage();
-
-  // enter key sends
+  scrollChat();
   document.getElementById('chatInput').addEventListener('keydown',e=>{
     if(e.key==='Enter'&&!e.shiftKey){e.preventDefault();sendChat();}
   });
 }
 
-function renderChatHistory(){
+function renderAllBubbles(){
   const wrap=document.getElementById('chatWrap');if(!wrap)return;
   wrap.innerHTML='';
   chatHistory.forEach(msg=>{
-    if(msg.role==='user') appendUserBubble(msg.content);
-    else if(msg.role==='assistant') appendAIBubble(msg.content);
+    if(msg.role==='user')appendUserBubble(msg.content);
+    else appendAIBubble(msg.content);
   });
-  // render any pending programs
-  if(pendingPrograms) renderProgramPreviews();
-  scrollChat();
-}
-
-function triggerOpeningMessage(){
-  const greeting = S.goals
-    ? `Welcome back! Your saved goals: *"${S.goals}"*\n\nReady to build or update your program? Tell me anything that's changed, or I can generate a fresh plan based on your goals right now.`
-    : `Hey! I'm your AI coach. Let's build your personalised weekly workout program.\n\nTo get started — **how many days a week are you training**, and **what's your main goal?** (e.g. build muscle, get stronger, lose fat, improve fitness)`;
-  addAIMessage(greeting, false); // don't save to history yet, just display
+  if(pendingPrograms)renderProgramPreviews();
 }
 
 async function sendChat(){
@@ -845,208 +882,169 @@ async function sendChat(){
   const text=input.value.trim();if(!text)return;
   input.value='';
 
-  // If first user message and no goals saved, save it as goals
+  // Save first user message as goals
   if(!S.goals&&chatHistory.filter(m=>m.role==='user').length===0){
     S.goals=text;save();
-    // Re-render the goals card without full page rebuild
-    const existing=document.querySelector('.goals-card');
-    if(!existing){
-      const banner=document.querySelector('.ai-banner');
-      const gc=document.createElement('div');
-      gc.className='goals-card';
-      gc.innerHTML=`<div class="goals-card-hdr"><span class="goals-card-lbl">YOUR GOALS</span><button class="goals-edit-btn" onclick="clearGoals()">CLEAR</button></div><div class="goals-text">${escHtml(S.goals)}</div>`;
-      banner.insertAdjacentElement('afterend',gc);
+    if(!document.querySelector('.goals-card')){
+      const gc=document.createElement('div');gc.className='goals-card';
+      gc.innerHTML='<div class="goals-card-hdr"><span class="goals-card-lbl">YOUR GOALS</span><button class="goals-edit-btn" onclick="clearGoals()">CLEAR</button></div><div class="goals-text">'+escHtml(text)+'</div>';
+      document.querySelector('.ai-banner').insertAdjacentElement('afterend',gc);
     }
   }
 
-  addUserMessage(text);
-  await callAI(text);
-}
-
-function addUserMessage(text){
+  // Add user message to history and display
   chatHistory.push({role:'user',content:text});
   S.chatHistory=chatHistory.slice(-40);save();
-  appendUserBubble(text);scrollChat();
+  appendUserBubble(text);
+  scrollChat();
+
+  await callAI();
 }
 
-function addAIMessage(text,persist=true){
-  if(persist){chatHistory.push({role:'assistant',content:text});S.chatHistory=chatHistory.slice(-40);save();}
-  appendAIBubble(text);
-  // check for programs
-  const match=text.match(/<PROGRAMS>([\s\S]*?)<\/PROGRAMS>/);
-  if(match){
-    try{pendingPrograms=JSON.parse(match[1].trim());renderProgramPreviews();}catch(e){console.warn('Program parse fail',e);}
+async function callAI(){
+  aiTyping=true;
+  const sendBtn=document.getElementById('chatSendBtn');
+  if(sendBtn)sendBtn.disabled=true;
+
+  // Show typing indicator
+  const wrap=document.getElementById('chatWrap');
+  const typingEl=document.createElement('div');typingEl.className='chat-msg';typingEl.id='typingIndicator';
+  typingEl.innerHTML='<div class="chat-avatar ai">✦</div><div class="chat-bubble ai"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>';
+  wrap.appendChild(typingEl);scrollChat();
+
+  // Build system prompt with saved goals
+  const system=S.goals?SYSTEM_PROMPT+'\n\nUSER SAVED GOALS: "'+S.goals+'"':SYSTEM_PROMPT;
+
+  // Send the full chatHistory (already includes both the opening AI message and user messages)
+  const messages=chatHistory.map(m=>({role:m.role,content:m.content}));
+
+  try{
+    const res=await fetch('/.netlify/functions/coach',{
+      method:'POST',
+      headers:{'Content-Type':'application/json'},
+      body:JSON.stringify({system,messages})
+    });
+    const data=await res.json();
+    document.getElementById('typingIndicator')?.remove();
+
+    if(!res.ok||data.error){
+      const err=data.error||'Server error ('+res.status+')';
+      appendAIBubble('⚠️ '+err);
+      console.error('Coach error:',err);
+    } else {
+      const reply=data.reply||'No response received.';
+      // Save to history
+      chatHistory.push({role:'assistant',content:reply});
+      S.chatHistory=chatHistory.slice(-40);save();
+      appendAIBubble(reply);
+      // Check for program JSON
+      const match=reply.match(/<PROGRAMS>([\s\S]*?)<\/PROGRAMS>/);
+      if(match){try{pendingPrograms=JSON.parse(match[1].trim());renderProgramPreviews();}catch(e){console.warn('Program parse error',e);}}
+    }
+  } catch(err){
+    document.getElementById('typingIndicator')?.remove();
+    appendAIBubble('⚠️ Could not reach the AI. Check your connection or that the site is deployed on Netlify.');
+    console.error('Fetch error:',err);
   }
+
+  aiTyping=false;
+  const sendBtn2=document.getElementById('chatSendBtn');
+  if(sendBtn2)sendBtn2.disabled=false;
   scrollChat();
 }
 
 function appendUserBubble(text){
   const wrap=document.getElementById('chatWrap');if(!wrap)return;
   const div=document.createElement('div');div.className='chat-msg user';
-  div.innerHTML=`<div class="chat-avatar user">D</div><div class="chat-bubble user">${formatMsg(text)}</div>`;
+  div.innerHTML='<div class="chat-avatar user">D</div><div class="chat-bubble user">'+formatMsg(text)+'</div>';
   wrap.appendChild(div);
 }
 
 function appendAIBubble(text){
   const wrap=document.getElementById('chatWrap');if(!wrap)return;
-  // strip the PROGRAMS block from display
   const display=text.replace(/<PROGRAMS>[\s\S]*?<\/PROGRAMS>/g,'').trim();
   if(!display)return;
   const div=document.createElement('div');div.className='chat-msg';
-  div.innerHTML=`<div class="chat-avatar ai">✦</div><div class="chat-bubble ai">${formatMsg(display)}</div>`;
+  div.innerHTML='<div class="chat-avatar ai">✦</div><div class="chat-bubble ai">'+formatMsg(display)+'</div>';
   wrap.appendChild(div);
 }
 
 function renderProgramPreviews(){
   const wrap=document.getElementById('chatWrap');if(!wrap||!pendingPrograms)return;
-  // remove existing preview block if any
   document.getElementById('progPreviewBlock')?.remove();
-  const block=document.createElement('div');block.id='progPreviewBlock';
-  block.style.margin='4px 0';
-
-  const header=document.createElement('div');
-  header.className='chat-msg';
-  header.innerHTML=`<div class="chat-avatar ai">✦</div><div class="chat-bubble ai"><strong>${pendingPrograms.length} program${pendingPrograms.length>1?'s':''} ready</strong> — expand each to preview, then add to your workouts.</div>`;
+  const block=document.createElement('div');block.id='progPreviewBlock';block.style.margin='4px 0';
+  const header=document.createElement('div');header.className='chat-msg';
+  header.innerHTML='<div class="chat-avatar ai">✦</div><div class="chat-bubble ai"><strong>'+pendingPrograms.length+' program'+(pendingPrograms.length>1?'s':'')+' ready</strong> — expand to preview, then add to your workouts.</div>';
   block.appendChild(header);
-
   const previews=document.createElement('div');previews.className='prog-previews';
-  pendingPrograms.forEach((prog,i)=>{
+  pendingPrograms.forEach(prog=>{
     const totalSets=prog.exercises.reduce((a,e)=>a+(e.sets||3),0);
     const div=document.createElement('div');div.className='prog-preview';
-    let exRows=prog.exercises.map(ex=>`<div class="prev-ex-row"><span class="prev-ex-name">${ex.name}</span><span class="prev-ex-detail">${ex.sets}×${ex.reps}</span><span class="prev-rest">${ex.rest||'2 min'}</span></div>`).join('');
-    div.innerHTML=`<div class="prog-preview-hdr" onclick="this.parentElement.classList.toggle('open')">
-      <div><div class="prog-preview-name">${prog.label}</div><div class="prog-preview-meta">${prog.exercises.length} exercises · ${totalSets} sets</div></div>
-      <span class="prog-preview-chev">▼</span>
-    </div>
-    <div class="prog-preview-body">${exRows}</div>`;
+    const exRows=prog.exercises.map(ex=>'<div class="prev-ex-row"><span class="prev-ex-name">'+ex.name+'</span><span class="prev-ex-detail">'+ex.sets+'×'+ex.reps+'</span><span class="prev-rest">'+(ex.rest||'2 min')+'</span></div>').join('');
+    div.innerHTML='<div class="prog-preview-hdr" onclick="this.parentElement.classList.toggle(\'open\')"><div><div class="prog-preview-name">'+prog.label+'</div><div class="prog-preview-meta">'+prog.exercises.length+' exercises · '+totalSets+' sets</div></div><span class="prog-preview-chev">▼</span></div><div class="prog-preview-body">'+exRows+'</div>';
     previews.appendChild(div);
   });
   block.appendChild(previews);
-
-  const addBtn=document.createElement('button');
-  addBtn.className='add-all-btn';
-  addBtn.textContent=`＋ ADD ${pendingPrograms.length} PROGRAM${pendingPrograms.length>1?'S':''} TO MY WORKOUTS`;
+  const addBtn=document.createElement('button');addBtn.className='add-all-btn';
+  addBtn.textContent='＋ ADD '+pendingPrograms.length+' PROGRAM'+(pendingPrograms.length>1?'S':'')+' TO MY WORKOUTS';
   addBtn.onclick=acceptPrograms;
   block.appendChild(addBtn);
-
   wrap.appendChild(block);
+  scrollChat();
 }
 
 function acceptPrograms(){
   if(!pendingPrograms)return;
-  const map=exMap();
-
-  pendingPrograms.forEach(prog=>{
+  const saved=pendingPrograms;
+  saved.forEach(prog=>{
     const id='ai_'+Date.now()+'_'+Math.random().toString(36).slice(2,6);
     const exercises=[];
     prog.exercises.forEach(ex=>{
-      // Match to library by name (case-insensitive partial)
       const nl=ex.name.toLowerCase();
-      let found=LIB.find(l=>l.name.toLowerCase()===nl)||LIB.find(l=>nl.includes(l.name.toLowerCase().split(' ')[0])&&nl.includes(l.name.toLowerCase().split(' ').pop()));
+      const found=LIB.find(l=>l.name.toLowerCase()===nl)||LIB.find(l=>nl.includes(l.name.toLowerCase().split(' ')[0]));
       if(found){
         exercises.push(found.id);
-        // save set count override
         if(ex.sets&&ex.sets!==parseSets(found.tag)){if(!S.exSets)S.exSets={};S.exSets[found.id]=ex.sets;}
-        // save notes
         if(ex.notes){if(!S.exNotes)S.exNotes={};S.exNotes[found.id]=(S.exNotes[found.id]?S.exNotes[found.id]+' | ':'')+ex.notes;}
       } else {
-        // create as custom
         const cid='custom_'+Date.now()+'_'+Math.random().toString(36).slice(2,5);
-        S.customs.push({id:cid,name:ex.name,cat:'Push',tag:`${ex.sets||3}×${ex.reps||'10–12'}`});
+        S.customs.push({id:cid,name:ex.name,cat:'Push',tag:(ex.sets||3)+'×'+(ex.reps||'10-12')});
         exercises.push(cid);
       }
     });
     S.programs.push({id,label:prog.label,exercises});
   });
-
   save();pendingPrograms=null;
   document.getElementById('progPreviewBlock')?.remove();
   rebuildAll();switchPage('workouts');
-  showToast(`${pendingPrograms===null?'Programs':'Program'} added to Workouts! 🎉`);
   showToast('Programs added to Workouts! 🎉');
 }
 
-async function callAI(userText){
-  aiTyping=true;
-  document.getElementById('chatSendBtn').disabled=true;
-
-  // Show typing indicator
-  const wrap=document.getElementById('chatWrap');
-  const typingEl=document.createElement('div');typingEl.className='chat-msg';typingEl.id='typingIndicator';
-  typingEl.innerHTML=`<div class="chat-avatar ai">✦</div><div class="chat-bubble ai"><div class="typing-indicator"><div class="typing-dot"></div><div class="typing-dot"></div><div class="typing-dot"></div></div></div>`;
-  wrap.appendChild(typingEl);scrollChat();
-
-  // Build messages: include full history for context
-  const messages=chatHistory.map(m=>({role:m.role,content:m.content}));
-  // Inject goals as context reminder if present
-  const systemWithGoals=S.goals?COACH_SYSTEM+`\n\nUSER'S SAVED GOALS: "${S.goals}"`:COACH_SYSTEM;
-
-  try{
-    const res=await fetch('/.netlify/functions/coach',{
-      method:'POST',
-      headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({system:systemWithGoals,messages})
-    });
-    const data=await res.json();
-    document.getElementById('typingIndicator')?.remove();
-    if(!res.ok||data.error){
-      const errMsg=data.error||'Server error ('+res.status+')';
-      addAIMessage('⚠️ '+errMsg);
-      console.error('Coach error:',errMsg);
-    } else {
-      const reply=data.reply||'No response received.';
-      addAIMessage(reply);
-    }
-  }catch(err){
-    document.getElementById('typingIndicator')?.remove();
-    addAIMessage('⚠️ Could not reach the AI. Error: '+err.message+'. Make sure the site is deployed on Netlify (not opened as a local file).');
-    console.error('Fetch error:',err);
-  }
-
-  aiTyping=false;
-  document.getElementById('chatSendBtn').disabled=false;
-}
-
-function newChat(){
-  chatHistory=[];S.chatHistory=[];save();
-  pendingPrograms=null;
-  renderCoachPage();
-}
-
-function clearGoals(){
-  S.goals='';save();
-  document.querySelector('.goals-card')?.remove();
-  showToast('Goals cleared');
-}
+function newChat(){chatHistory=[];S.chatHistory=[];save();pendingPrograms=null;renderCoachPage();}
+function clearGoals(){S.goals='';save();document.querySelector('.goals-card')?.remove();showToast('Goals cleared');}
 
 function formatMsg(text){
-  return text
+  return '<p>'+text
     .replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
     .replace(/\*\*(.*?)\*\*/g,'<strong>$1</strong>')
     .replace(/\*(.*?)\*/g,'<em>$1</em>')
-    .replace(/^#{1,3}\s(.+)/gm,'<strong>$1</strong>')
     .replace(/\n\n/g,'</p><p>')
-    .replace(/\n/g,'<br>')
-    .replace(/^(.+)$/,'<p>$1</p>');
+    .replace(/\n/g,'<br>')+'</p>';
 }
 function escHtml(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');}
-function scrollChat(){const w=document.getElementById('chatWrap');if(w)w.scrollTop=w.scrollHeight;}
+function scrollChat(){const w=document.getElementById('chatWrap');if(w)setTimeout(()=>w.scrollTop=w.scrollHeight,50);}
 
-// ══════════════════════════════════════════════════════════
-// TIMER
-// ══════════════════════════════════════════════════════════
+// ── TIMER ────────────────────────────────────────────────
 let tIv=null,tRem=0,tTot=0,tPaused=false;
 function startTimer(s){tTot=s;tRem=s;tPaused=false;document.getElementById('pauseBtn').textContent='⏸';document.getElementById('timerBar').classList.add('vis');updateTUI();if(tIv)clearInterval(tIv);tIv=setInterval(()=>{if(tPaused)return;tRem--;if(tRem<=0){tRem=0;updateTUI();clearInterval(tIv);timerDone();}else updateTUI();},1000);}
-function updateTUI(){const m=Math.floor(tRem/60),s=tRem%60;const d=document.getElementById('tdisp');d.textContent=`${m}:${String(s).padStart(2,'0')}`;const pct=tTot>0?(tRem/tTot)*100:0;const f=document.getElementById('tfill');f.style.width=pct+'%';d.className='t-display';f.style.background='var(--accent)';if(tRem<=30){d.classList.add('hot');f.style.background='var(--danger)';}else if(tRem<=60){d.classList.add('warn');f.style.background='var(--accent2)';};}
+function updateTUI(){const m=Math.floor(tRem/60),s=tRem%60;const d=document.getElementById('tdisp');d.textContent=m+':'+String(s).padStart(2,'0');const pct=tTot>0?(tRem/tTot)*100:0;const f=document.getElementById('tfill');f.style.width=pct+'%';d.className='t-display';f.style.background='var(--accent)';if(tRem<=30){d.classList.add('hot');f.style.background='var(--danger)';}else if(tRem<=60){d.classList.add('warn');f.style.background='var(--accent2)';}}
 function timerDone(){const d=document.getElementById('tdisp');d.textContent='GO!';d.style.color='var(--success)';if(navigator.vibrate)navigator.vibrate([200,100,200]);setTimeout(()=>{d.style.color='';dismissTimer();},2000);}
 function adjustTimer(delta){tRem=Math.max(0,tRem+delta);tTot=Math.max(tTot,tRem);updateTUI();}
 function togglePause(){tPaused=!tPaused;document.getElementById('pauseBtn').textContent=tPaused?'▶':'⏸';}
 function dismissTimer(){if(tIv)clearInterval(tIv);document.getElementById('timerBar').classList.remove('vis');}
 function setPreset(s,btn){document.querySelectorAll('.tpre').forEach(b=>b.classList.remove('on'));btn.classList.add('on');startTimer(s);}
 
-// ══════════════════════════════════════════════════════════
-// TOAST
-// ══════════════════════════════════════════════════════════
+// ── TOAST ────────────────────────────────────────────────
 let toastT;
 function showToast(msg){const t=document.getElementById('toast');t.textContent=msg;t.classList.add('show');clearTimeout(toastT);toastT=setTimeout(()=>t.classList.remove('show'),2500);}
 </script>
