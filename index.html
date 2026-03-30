@@ -404,39 +404,56 @@ input[type=number]::-webkit-outer-spin-button,input[type=number]::-webkit-inner-
 <script>
 // ── LIBRARY ──────────────────────────────────────────────
 const LIB=[
+  // Push
   {id:'bp',name:'Barbell Bench Press',cat:'Push',tag:'4×6–8'},
   {id:'ohp',name:'Overhead Press',cat:'Push',tag:'4×6–8'},
   {id:'incdb',name:'Incline Dumbbell Press',cat:'Push',tag:'3×8–10'},
+  {id:'low_inc_db',name:'Low Incline DB Chest Press',cat:'Push',tag:'2×6–12'},
+  {id:'plate_inc',name:'Plate Loaded Incline Chest Press',cat:'Push',tag:'2×6–12'},
+  {id:'plate_cp',name:'Plate Loaded Chest Press',cat:'Push',tag:'3×6–12'},
+  {id:'inc_smith',name:'Incline Smith Press',cat:'Push',tag:'3×6–12'},
   {id:'dips',name:'Weighted Dips',cat:'Push',tag:'3×8–10'},
   {id:'cfly',name:'Cable Chest Fly',cat:'Push',tag:'3×12–15'},
-  {id:'pecdec',name:'Pec Deck',cat:'Push',tag:'3×12–15'},
+  {id:'pecdec',name:'Pec Dec Fly',cat:'Push',tag:'2×6–10'},
   {id:'cgbp',name:'Close-Grip Bench Press',cat:'Push',tag:'3×8–10'},
+  // Pull
   {id:'pullup',name:'Weighted Pull-Up',cat:'Pull',tag:'4×5–8'},
   {id:'br',name:'Barbell Row',cat:'Pull',tag:'4×6–8'},
-  {id:'csr',name:'Cable Seated Row',cat:'Pull',tag:'3×10–12'},
-  {id:'lat',name:'Lat Pulldown',cat:'Pull',tag:'3×10–12'},
+  {id:'seal_row',name:'Barbell Seal Row',cat:'Pull',tag:'2×5–10'},
+  {id:'csr',name:'Seated Cable Row',cat:'Pull',tag:'3×6–12'},
+  {id:'lat',name:'Lat Pulldown',cat:'Pull',tag:'2×6–12'},
+  {id:'uni_lat',name:'Unilateral Crossbody Cable Pulldown',cat:'Pull',tag:'3×6–12'},
+  {id:'inc_lat_po',name:'Incline Cable Lat Pullover',cat:'Pull',tag:'2×12–15'},
   {id:'dbrow',name:'Dumbbell Row',cat:'Pull',tag:'3×10–12'},
   {id:'trow',name:'T-Bar Row',cat:'Pull',tag:'3×8–10'},
   {id:'shrug',name:'Barbell Shrug',cat:'Pull',tag:'3×10–12'},
+  // Shoulders
   {id:'lrise',name:'Cable Lateral Raise',cat:'Shoulders',tag:'3×12–15'},
+  {id:'cs_lrise',name:'Chest Supported Straight Arm Lateral Raise',cat:'Shoulders',tag:'3×10–15'},
   {id:'fraise',name:'Front Raise',cat:'Shoulders',tag:'3×12–15'},
-  {id:'facep',name:'Face Pull',cat:'Shoulders',tag:'3×15–20'},
+  {id:'facep',name:'Face Pull',cat:'Shoulders',tag:'3×8–12'},
   {id:'rrdelt',name:'Rear Delt Fly',cat:'Shoulders',tag:'3×12–15'},
   {id:'arnprs',name:'Arnold Press',cat:'Shoulders',tag:'3×10–12'},
   {id:'dbohp',name:'DB Shoulder Press',cat:'Shoulders',tag:'3×10–12'},
+  // Arms
   {id:'dbcurl',name:'Dumbbell Curl',cat:'Arms',tag:'3×10–12'},
   {id:'hcurl',name:'Hammer Curl',cat:'Arms',tag:'3×10–12'},
-  {id:'prcurl',name:'Preacher Curl',cat:'Arms',tag:'3×10–12'},
+  {id:'prcurl',name:'Preacher Curl',cat:'Arms',tag:'3×8–12'},
+  {id:'bayesian',name:'Bayesian Curl',cat:'Arms',tag:'3×10–15'},
   {id:'cbcurl',name:'Cable Curl',cat:'Arms',tag:'3×12–15'},
   {id:'incurl',name:'Incline DB Curl',cat:'Arms',tag:'3×10–12'},
   {id:'tpd',name:'Tricep Pushdown',cat:'Arms',tag:'3×10–12'},
+  {id:'tri_rope',name:'Tricep Rope Extension',cat:'Arms',tag:'3×8–12'},
+  {id:'tri_katana',name:'Triceps Katana Extension',cat:'Arms',tag:'3×10–15'},
   {id:'ohtri',name:'Overhead Tricep Ext.',cat:'Arms',tag:'3×10–12'},
   {id:'skulls',name:'Skull Crushers',cat:'Arms',tag:'3×10–12'},
+  // Core
   {id:'plank',name:'Plank Hold',cat:'Core',tag:'3×60s'},
   {id:'crnch',name:'Cable Crunch',cat:'Core',tag:'3×15–20'},
   {id:'llift',name:'Leg Raise',cat:'Core',tag:'3×15'},
   {id:'abwhl',name:'Ab Wheel Rollout',cat:'Core',tag:'3×10–12'},
   {id:'stwist',name:'Russian Twist',cat:'Core',tag:'3×20'},
+  // Legs
   {id:'squat',name:'Back Squat',cat:'Legs',tag:'4×5–6'},
   {id:'rdl',name:'Romanian Deadlift',cat:'Legs',tag:'4×6–8'},
   {id:'dl',name:'Conventional Deadlift',cat:'Legs',tag:'4×4–6'},
@@ -446,6 +463,7 @@ const LIB=[
   {id:'hipthst',name:'Hip Thrust',cat:'Legs',tag:'3×10–12'},
   {id:'stcalf',name:'Standing Calf Raise',cat:'Legs',tag:'4×12–15'},
   {id:'secalf',name:'Seated Calf Raise',cat:'Legs',tag:'3×15–20'},
+  // Accessories
   {id:'wrlext',name:'Wrist Roller',cat:'Accessories',tag:'3×sets'},
   {id:'farmrs',name:"Farmer's Walk",cat:'Accessories',tag:'3×40m'},
   {id:'deadhn',name:'Dead Hang',cat:'Accessories',tag:'3×30–60s'},
@@ -459,14 +477,36 @@ function load(){try{return JSON.parse(localStorage.getItem('lift7')||'{}')}catch
 function save(){localStorage.setItem('lift7',JSON.stringify(S))}
 let S=load();
 if(!S.programs)S.programs=[
-  {id:'push',label:'Upper Push',exercises:['bp','ohp','incdb','lrise','tpd','ohtri']},
-  {id:'pull',label:'Upper Pull',exercises:['pullup','br','csr','facep','dbcurl','hcurl']},
+  {id:'push',label:'Upper (Push Emphasis)',exercises:['low_inc_db','uni_lat','plate_inc','csr','pecdec','cs_lrise','bayesian','tri_rope']},
+  {id:'pull',label:'Upper (Pull Emphasis)',exercises:['seal_row','inc_smith','lat','plate_cp','inc_lat_po','facep','prcurl','tri_katana']},
   {id:'upper',label:'Upper',exercises:[]},
 ];
+// Set count overrides for your programs
+if(!S.exSets)S.exSets={};
+if(Object.keys(S.exSets).length===0){
+  // Push emphasis set counts
+  S.exSets['low_inc_db']=2;
+  S.exSets['uni_lat']=3;
+  S.exSets['plate_inc']=2;
+  S.exSets['csr']=3;
+  S.exSets['pecdec']=2;
+  S.exSets['cs_lrise']=3;
+  S.exSets['bayesian']=3;
+  S.exSets['tri_rope']=3;
+  // Pull emphasis set counts
+  S.exSets['seal_row']=2;
+  S.exSets['inc_smith']=3;
+  S.exSets['lat']=2;
+  S.exSets['plate_cp']=3;
+  S.exSets['inc_lat_po']=2;
+  S.exSets['facep']=3;
+  S.exSets['prcurl']=3;
+  S.exSets['tri_katana']=3;
+}
 if(!S.customs)S.customs=[];
 if(!S.history)S.history=[];
 if(!S.exNotes)S.exNotes={};
-if(!S.exSets)S.exSets={};
+
 if(!S.goals)S.goals='';
 if(!S.chatHistory)S.chatHistory=[];
 save();
